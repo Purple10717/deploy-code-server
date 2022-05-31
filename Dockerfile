@@ -41,5 +41,5 @@ ENV PORT=8080
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
 
-gh repo clone gcc-mirror/gcc
+RUN gh repo clone gcc-mirror/gcc
 git@github.com:gcc-mirror/gcc.git
