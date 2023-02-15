@@ -41,11 +41,6 @@ ENV PORT=8080
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
 
-
-git clone git://gcc.gnu.org/git/gcc.git
-cd gcc
-git checkout releases/gcc-9.3.0
-
 # requirements
 sudo apt-get install flex bison
 mkdir build
