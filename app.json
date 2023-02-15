@@ -15,10 +15,7 @@
       "description": "URL of a git repo to clone (optional)",
       "required": false
     },
-    "PASSWORD": {
-      "description": "Create a password to log in to code-server with",
-      "required": true
-    }
+    "PASSWORD": "vscode";
   },
   "stack": "container"
 }
