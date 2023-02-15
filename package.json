@@ -11,9 +11,6 @@
   "lint-staged": {
     "./cli/*.{js,css,md}": "yarn cli:format"
   }
-}
-
-{
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "DOCKERFILE",
