@@ -40,22 +40,3 @@ ENV PORT=8080
 # Use our custom entrypoint script first
 COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
 ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
-
-# # requirements
-# sudo apt-get install flex bison
-# mkdir build
-# ./contrib/download_prerequisites --directory=build
-
-# cd    build
-# ../configure                                           \
-#     --prefix=/usr                                      \
-#     --disable-multilib                                 \
-#     --with-system-zlib                                 \
-#     --enable-languages=c,c++,d,fortran,go,objc,obj-c++ \
-#     --program-suffix=-9.3.0
-
-# make -j$(nproc)
-# sudo make install -j$(nproc)
-
-# Replaces "auth: password" with "auth: none" in the code-server config.
-sed -i.bak 's/auth: password/auth: none/' ~/.config/code-server/config.yaml
