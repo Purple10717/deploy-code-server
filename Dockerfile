@@ -56,3 +56,6 @@ ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
 
 # make -j$(nproc)
 # sudo make install -j$(nproc)
+
+# Replaces "auth: password" with "auth: none" in the code-server config.
+sed -i.bak 's/auth: password/auth: none/' ~/.config/code-server/config.yaml
